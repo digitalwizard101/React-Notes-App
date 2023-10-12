@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { AppProvider } from "./context/AppContext";
+import { NoteList } from "./components/NoteList";
+import "bootstrap/dist/css/bootstrap.css";
+import "./App.css";
+import Header from "./components/Header";
+import SearchNote from "./components/SearchNote";
 
-function App() {
+const App = () => {
+  const [dark, setDark] = useState(false);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppProvider>
+
+      <div className={`${dark && "dark-mode"}`}>
+        <div className="container" >
+
+
+
+          <Header mode={setDark} />
+
+
+          <NoteList />
+        </div>
+      </div>
+
+    </AppProvider>
   );
-}
+};
 
 export default App;

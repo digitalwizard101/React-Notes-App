@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+body {
+  font-family: 'Lobster', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.note {
+  background-color: rgb(242, 242, 161);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  min-width: 250px;
+  min-height: 250px;
+  text-align: center;
+
+
+
+
+
+}
+
+
+
+.new {
+  background-color: pink;
+  min-width: 250px;
+  height: 250px;
+  border-radius: 10px;
+
+
+
+
+
+}
+
+textarea {
+  background-color: pink;
+  outline: none;
+  border: none;
+  resize: none;
+  text-align: center;
+
+
+
+}
+
+.note-footer {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+#delete-icon {
+  cursor: pointer;
+}
+
+#delete-icon:hover {
+  color: red;
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+
+
+
+}
+
+
+.dark-mode {
+  background-color: black;
+}
+
+
+
+.dark-mode h1 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.note-list {
+  padding-bottom: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.search-note {
+  display: flex;
+  align-items: center;
+  background-color: grey;
+  border-radius: 15px;
+  margin: 10px 0 10px 0;
+  padding: 10px;
+}
+
+.search-note input {
+
+  border: none;
+  background-color: grey;
+  margin-left: 5px;
+  text-align: center;
+  width: 100%;
+  outline: none;
+  border: none !important;
+
+
+}
+
+.search-note input:focus {
+  background-color: grey;
+  outline: none;
+
 }
